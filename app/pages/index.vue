@@ -74,7 +74,7 @@
               v-for="i in 6"
               :key="i"
               variant="outline"
-              class="h-20"
+              class="h-20 quick-tile-btn"
             >
               Tile {{ i }}
             </UButton>

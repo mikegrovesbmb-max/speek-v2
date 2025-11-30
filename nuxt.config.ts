@@ -13,7 +13,11 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
   ],
-
+vite: {
+    server: {
+      allowedHosts: true,
+    }
+  },
   runtimeConfig: {
     // Private keys (server-side only)
     deepgramApiKey: process.env.NUXT_DEEPGRAM_API_KEY,
@@ -40,6 +44,9 @@ export default defineNuxtConfig({
   ui: {
     icons: ['heroicons', 'mdi'],
   },
+  css: [
+    '~/assets/css/main.css'
+  ],
 
   pwa: {
     registerType: 'autoUpdate',
