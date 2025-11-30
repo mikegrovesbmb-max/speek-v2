@@ -1,0 +1,23 @@
+# This is an example configuration file
+# To learn more, see the full config.yaml reference: https://docs.continue.dev/reference
+
+name: Example Config
+version: 1.0.0
+schema: v1
+
+# Define which models can be used
+# https://docs.continue.dev/customization/models
+models:
+  - name: my gpt-5
+    provider: openai
+    model: gpt-5
+    apiKey: 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
+  - uses: ollama/qwen2.5-coder-7b
+  - uses: anthropic/claude-4-sonnet
+    with:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+# MCP Servers that Continue can access
+# https://docs.continue.dev/customization/mcp-tools
+mcpServers:
+  - uses: anthropic/memory-mcp
