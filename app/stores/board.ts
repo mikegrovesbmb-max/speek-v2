@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { defineStore } from 'pinia'
+import { piniaPluginPersistedstate } from '#imports'
 interface Rile {
   position: number;
   text: string;

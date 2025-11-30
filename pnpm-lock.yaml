@@ -23,6 +23,9 @@ importers:
       '@vee-validate/nuxt':
         specifier: ^4.15.1
         version: 4.15.1(magicast@0.5.1)(vue@3.5.25(typescript@5.9.3))
+      '@vee-validate/zod':
+        specifier: ^4.15.1
+        version: 4.15.1(vue@3.5.25(typescript@5.9.3))(zod@4.1.13)
       '@vite-pwa/nuxt':
         specifier: ^1.0.7
         version: 1.0.7(magicast@0.5.1)(vite@7.2.4(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(yaml@2.8.1))(workbox-build@7.4.0)(workbox-window@7.4.0)
@@ -2196,6 +2199,11 @@ packages:
 
   '@vee-validate/nuxt@4.15.1':
     resolution: {integrity: sha512-vy+BYUmwy7d01js8jg3qApyrE8/nJHbHvPZNYZSe+hTQEblNqyVt+MnD1incyxMCcivED8FX5w4rjxdoUn7iMQ==}
+
+  '@vee-validate/zod@4.15.1':
+    resolution: {integrity: sha512-329Z4TDBE5Vx0FdbA8S4eR9iGCFFUNGbxjpQ20ff5b5wGueScjocUIx9JHPa79LTG06RnlUR4XogQsjN4tecKA==}
+    peerDependencies:
+      zod: ^3.24.0
 
   '@vercel/nft@0.30.4':
     resolution: {integrity: sha512-wE6eAGSXScra60N2l6jWvNtVK0m+sh873CpfZW4KI2v8EHuUQp+mSEi4T+IcdPCSEDgCdAS/7bizbhQlkjzrSA==}
@@ -8575,6 +8583,14 @@ snapshots:
       vee-validate: 4.15.1(vue@3.5.25(typescript@5.9.3))
     transitivePeerDependencies:
       - magicast
+      - vue
+
+  '@vee-validate/zod@4.15.1(vue@3.5.25(typescript@5.9.3))(zod@4.1.13)':
+    dependencies:
+      type-fest: 4.41.0
+      vee-validate: 4.15.1(vue@3.5.25(typescript@5.9.3))
+      zod: 4.1.13
+    transitivePeerDependencies:
       - vue
 
   '@vercel/nft@0.30.4(rollup@4.53.3)':

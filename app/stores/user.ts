@@ -1,5 +1,9 @@
+import { piniaPluginPersistedstate } from '#imports'
+import { defineStore } from 'pinia'
+
 interface user {
   username: string
+  displayName?: string
   isAuthenticated: boolean
   authCookie: string
 }
@@ -12,19 +16,22 @@ export const useUserStore = defineStore('user', {
     return {
       // for ini
     username: '',
+    displayName: '',
     isAuthenticated: false,
     authCookie: '',
     }
   },
   actions: {
-    setUser(username: string) {
+    setUser(username: string, displayName?: string) {
       this.username = username
+      if (displayName) this.displayName = displayName
       this.isAuthenticated = true
     },
     clearUser() {
       this.username = ''
       this.isAuthenticated = false
       this.authCookie = ''
+      this.displayName = ''
     },
     setAuthCookie(cookie: string) {
       this.authCookie = cookie

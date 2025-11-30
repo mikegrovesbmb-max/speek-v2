@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "cross-env NUXT_HOST=0.0.0.0 NUXT_PORT=3001 nuxt dev  --host=0.0.0.0 --dotenv .env.local",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -15,6 +15,7 @@
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@pinia/nuxt": "^0.11.3",
     "@vee-validate/nuxt": "^4.15.1",
+    "@vee-validate/zod": "^4.15.1",
     "@vite-pwa/nuxt": "^1.0.7",
     "@vueuse/nuxt": "^14.0.0",
     "nuxt": "^4.2.1",

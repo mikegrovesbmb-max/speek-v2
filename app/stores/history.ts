@@ -1,3 +1,6 @@
+import { defineStore } from 'pinia'
+import { piniaPluginPersistedstate } from '#imports'
+
 interface HistoryItem {
   text: string;
   count: number;

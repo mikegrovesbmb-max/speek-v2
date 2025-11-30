@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
     '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt',
     '@vueuse/nuxt',
     '@vee-validate/nuxt',
     '@vite-pwa/nuxt',
@@ -31,8 +32,9 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
-    preference: 'light',
-    fallback: 'light',
+    preference: 'dark',
+    fallback: 'dark',
+    classSuffix: '',
   },
 
   ui: {
